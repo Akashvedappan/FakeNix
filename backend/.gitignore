@@ -1,0 +1,62 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Environment files (NEVER commit secrets)
+.env
+
+# Storage — uploaded media, generated reports
+storage/uploads/*
+storage/processed/*
+storage/evidence/*
+storage/reports/*
+!storage/uploads/.gitkeep
+!storage/processed/.gitkeep
+!storage/evidence/.gitkeep
+!storage/reports/.gitkeep
+
+# AI model weights (large binaries — distribute separately)
+models/*.keras
+models/*.h5
+models/*.pb
+models/*.tflite
+models/*.onnx
+!models/README.md
+!models/.gitkeep
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Migrations (auto-generated — commit selectively)
+migrations/versions/
+
+# IDE / OS
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
