@@ -4,6 +4,7 @@ import { Mail, Lock, Eye, EyeOff, Cpu, Shield, Brain, CheckCircle } from 'lucide
 import { useAppAuth, useToast } from '../App'
 import { authService } from '../services/authService'
 import { getErrorMessage } from '../services/api'
+import Logo from '../components/common/Logo'
 import { validateEmail } from '../utils/validators'
 
 export default function Login() {
@@ -53,7 +54,7 @@ export default function Login() {
     <div className="auth-layout">
       {/* Left */}
       <div className="auth-left">
-        <div className="auth-left-logo">FAKENIX</div>
+        <Logo size="xl" className="auth-left-logo" />
         <h1 className="auth-left-title">A safer internet starts with you.</h1>
         <p className="auth-left-subtitle">
           FAKENIX 2.0 provides enterprise-grade deepfake detection, digital forensics, and cybercrime evidence management.
@@ -78,6 +79,7 @@ export default function Login() {
       {/* Right */}
       <div className="auth-right">
         <div className="auth-form-container">
+          <Logo size="lg" className="auth-form-logo" />
           <h2 className="auth-form-title">Welcome back</h2>
           <p className="auth-form-subtitle">Sign in to your FAKENIX account</p>
 

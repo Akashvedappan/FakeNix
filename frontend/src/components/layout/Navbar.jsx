@@ -4,6 +4,7 @@ import { Menu, Search, Bell, Settings, LogOut, ChevronDown } from 'lucide-react'
 import { useAppAuth } from '../../App'
 import { useNotifications } from '../../hooks/useNotifications'
 import { formatTimeAgo } from '../../utils/formatters'
+import Logo from '../common/Logo'
 
 const NOTIF_COLORS = {
   critical: ['var(--red-bg)', 'var(--red)'],
@@ -84,7 +85,8 @@ export default function Navbar({ onMenuToggle }) {
 
       {/* Breadcrumb */}
       <div className="navbar-breadcrumb">
-        <span>FAKENIX</span>
+        <Logo size="sm" />
+        <span className="breadcrumb-root">FAKENIX</span>
         {crumbs.map((c, i) => (
           <span key={i} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span className="breadcrumb-sep">/</span>

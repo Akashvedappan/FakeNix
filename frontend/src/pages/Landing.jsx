@@ -3,6 +3,7 @@ import {
   Cpu, ScanSearch, Shield, Brain, FileText, AlertTriangle, History,
   ChevronRight, CheckCircle, Globe
 } from 'lucide-react'
+import Logo from '../components/common/Logo'
 
 const features = [
   {
@@ -54,7 +55,10 @@ export default function Landing() {
     <div style={{ minHeight: '100vh', background: '#fff' }}>
       {/* Navbar */}
       <nav className="landing-nav">
-        <div className="landing-nav-logo">FAKENIX</div>
+        <div className="landing-nav-brand">
+          <Logo size="md" />
+          <span className="landing-nav-logo">FAKENIX</span>
+        </div>
         <div className="landing-nav-links">
           <a href="#features" className="btn btn-ghost" style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
             Features
@@ -230,12 +234,15 @@ export default function Landing() {
       {/* Footer */}
       <footer className="landing-footer">
         <div className="landing-footer-content">
-          <div>
-            <div style={{ fontWeight: 900, fontSize: 18, letterSpacing: 2, color: 'white', marginBottom: 4 }}>
-              FAKENIX
-            </div>
-            <div style={{ fontSize: 12, color: '#475569' }}>
-              AI-Powered Deepfake Detection &amp; Digital Forensics
+          <div className="landing-footer-brand">
+            <Logo size="lg" />
+            <div>
+              <div style={{ fontWeight: 900, fontSize: 18, letterSpacing: 2, color: 'white', marginBottom: 4 }}>
+                FAKENIX
+              </div>
+              <div style={{ fontSize: 12, color: '#475569' }}>
+                AI-Powered Deepfake Detection &amp; Digital Forensics
+              </div>
             </div>
           </div>
           <div className="landing-footer-links">

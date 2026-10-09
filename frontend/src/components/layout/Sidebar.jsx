@@ -2,10 +2,10 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import {
   LayoutDashboard, ScanSearch, Image, Video,
   History, Shield, FileText, AlertTriangle,
-  BookOpen, HelpCircle, Settings, LogOut,
-  Cpu
+  BookOpen, HelpCircle, Settings, LogOut
 } from 'lucide-react'
 import { useAppAuth } from '../../App'
+import Logo from '../common/Logo'
 
 const navSections = [
   {
@@ -63,9 +63,7 @@ export default function Sidebar({ isOpen, onClose }) {
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       {/* Logo */}
       <div className="sidebar-logo">
-        <div className="sidebar-logo-icon">
-          <Cpu size={18} />
-        </div>
+        <Logo size="md" />
         <div className="sidebar-logo-text">
           <span className="sidebar-logo-name">FAKENIX</span>
           <span className="sidebar-logo-version">v2.0</span>

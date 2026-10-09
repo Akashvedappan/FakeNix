@@ -4,6 +4,7 @@ import { User, Mail, Lock, Eye, EyeOff, CheckCircle, Cpu } from 'lucide-react'
 import { useAppAuth, useToast } from '../App'
 import { authService } from '../services/authService'
 import { getErrorMessage } from '../services/api'
+import Logo from '../components/common/Logo'
 import { validateEmail, validatePassword, getPasswordStrength } from '../utils/validators'
 
 export default function Register() {
@@ -54,7 +55,7 @@ export default function Register() {
   return (
     <div className="auth-layout">
       <div className="auth-left">
-        <div className="auth-left-logo">FAKENIX</div>
+        <Logo size="xl" className="auth-left-logo" />
         <h1 className="auth-left-title">Join the fight against digital deception.</h1>
         <p className="auth-left-subtitle">
           Create your account and start detecting deepfakes, preserving evidence, and reporting cybercrime — for free.
@@ -76,6 +77,7 @@ export default function Register() {
 
       <div className="auth-right">
         <div className="auth-form-container">
+          <Logo size="lg" className="auth-form-logo" />
           <h2 className="auth-form-title">Create your account</h2>
           <p className="auth-form-subtitle">Start detecting deepfakes in minutes</p>
 

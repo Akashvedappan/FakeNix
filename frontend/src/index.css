@@ -203,19 +203,30 @@ ul, ol {
   gap: 10px;
 }
 
-.sidebar-logo-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, #2563eb, #06b6d4);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 18px;
-  font-weight: 800;
+/* Official logo (components/common/Logo.jsx). The artwork ships on a white
+   canvas with wide margins, so it sits on a white tile and is scaled just
+   enough to trim that margin — the symbol and wordmark are never clipped. */
+.brand-logo {
+  display: block;
   flex-shrink: 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
 }
+
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.12);
+}
+
+.brand-logo-sm { width: 36px; height: 36px; }
+.brand-logo-md { width: 44px; height: 44px; }
+.brand-logo-lg { width: 72px; height: 72px; border-radius: 12px; }
+.brand-logo-xl { width: 132px; height: 132px; border-radius: 16px; }
 
 .sidebar-logo-text {
   display: flex;
@@ -1682,6 +1693,12 @@ tbody td {
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+.landing-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .landing-nav-logo {
   font-size: 22px;
   font-weight: 900;
@@ -2063,6 +2080,12 @@ tbody td {
   gap: 20px;
 }
 
+.landing-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .landing-footer-links {
   display: flex;
   gap: 24px;
@@ -2109,14 +2132,14 @@ tbody td {
 }
 
 .auth-left-logo {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  background: linear-gradient(135deg, #60a5fa, #06b6d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Shown only when the branded left panel is hidden (mobile). */
+.auth-form-logo {
+  display: none;
+  margin-bottom: 20px;
 }
 
 .auth-left-title {
@@ -2844,6 +2867,12 @@ tbody td {
     padding: 16px 20px;
   }
 
+  /* The logo already carries the wordmark; free the space on narrow screens. */
+  .landing-nav-logo,
+  .breadcrumb-root {
+    display: none;
+  }
+
   .landing-hero {
     padding: 100px 20px 60px;
   }
@@ -2857,6 +2886,7 @@ tbody td {
   .impact-cards { grid-template-columns: 1fr; }
   .landing-footer { padding: 30px 20px; }
   .landing-footer-content { flex-direction: column; text-align: center; }
+  .landing-footer-brand { flex-direction: column; }
   .detect-cards { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
@@ -2866,6 +2896,7 @@ tbody td {
   .hero-stats { gap: 20px; flex-wrap: wrap; }
   .auth-layout { grid-template-columns: 1fr; }
   .auth-left { display: none; }
+  .auth-form-logo { display: block; }
   .auth-right { padding: 40px 20px; }
   .result-verdict { padding: 24px 16px; }
   .verdict-score { font-size: 48px; }
