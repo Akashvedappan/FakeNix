@@ -66,7 +66,6 @@ export default function Sidebar({ isOpen, onClose }) {
         <Logo size="md" />
         <div className="sidebar-logo-text">
           <span className="sidebar-logo-name">FAKENIX</span>
-          <span className="sidebar-logo-version">v2.0</span>
         </div>
       </div>
 
