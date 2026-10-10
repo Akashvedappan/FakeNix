@@ -6,13 +6,22 @@ An end-to-end investigative platform for analyzing suspicious media, assessing m
 
 ---
 
+## Live Demo
+
+**Production Website:** [FAKENIX — Try the Platform](https://fake-nix.vercel.app/)
+
+Explore the live FAKENIX platform for AI-powered deepfake detection and digital forensic analysis.
+
+---
+
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Key Features](#key-features)
-3. [Technology Stack](#technology-stack)
-4.  [Documentation](#documentation)
-5. [License](#license)
+1. [Live Demo](#live-demo)
+2. [Overview](#overview)
+3. [Key Features](#key-features)
+4. [Technology Stack](#technology-stack)
+5. [Documentation](#documentation)
+6. [License](#license)
 
 ---
 
